@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Droid.Views.LoginPage">
+    <ContentPage.Content>
+        
+        <StackLayout x:Name="MasterLayout" Margin="20">
+            <StackLayout x:Name="LogoStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="LoginIcon" Source="LoginIcon.png" Margin="0,10,0,0" />
+            </StackLayout>
+            <StackLayout x:Name="LoginEntiries" VerticalOptions="StartAndExpand">
+                
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness" Phone="40,0,40,0" Tablet="140,150,140,0"/>
+                </StackLayout.Padding>
+                <ActivityIndicator x:Name="ActivitiySpinner" Color="Red" IsRunning="True" />
+                <Label Text="Welcome Back!" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Title" FontAttributes="Bold"/>
+                <Label Text="Sign To Continue" 
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="Subtitle"/>
+
+                <Entry x:Name="entry_username"  Placeholder="Username" />
+                <Entry x:Name="entry_password" Placeholder="Password" />
+                <Label Text="Forgot Password?" HorizontalTextAlignment="End" TextColor="LightGreen" FontAttributes="Bold"/>
+                <Button  Text="Sign In" Clicked="SignIn" BackgroundColor="LightGreen" />
+                <Label Text="Dont have a account? Create New Account!" TextColor="LightGreen"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
